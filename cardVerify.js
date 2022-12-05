@@ -1,8 +1,9 @@
 function cardVerify(text) {
-let regex  = /(^[4|5|6]\d{3})+?-?(\d{4})+?-?(\d{4})+?-?(\d{4})$/g
+let regex  = /^(?=[456])(?!.*(\d)(?:-?\1){3})(?:\d{4}(?:-?\d{4}){3})$/g
 let obj = text
 let res = regex.test(obj)
 console.log(obj)
+
 return res
 
 }
